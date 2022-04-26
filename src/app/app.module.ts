@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CourseModule } from './course/course.module';
 import { HttpClientModule } from '@angular/common/http';
+import { SeriesModule } from './series/series.module';
 
 @NgModule({
   declarations: [
@@ -14,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     AppRoutingModule,
     CourseModule,
+    SeriesModule,
     HttpClientModule
   ],
   providers: [],
