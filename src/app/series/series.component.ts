@@ -11,13 +11,25 @@ export class SeriesComponent implements OnInit {
   series: Array<Serie>=[];
 
 
+
   getSeries() {
     this.serieService.getSeries().subscribe(series => {
       this.series= series;
-      console.log(1);
-      console.log(series);
-      console.log(2)
     });
+  }
+
+  getAverage(){
+    let cantidad=0;
+    let promedio=0;
+    let suma=0;
+    for(let numbe of this.series){
+    suma+=numbe.seasons;
+      cantidad+=1;
+      console.log(suma)
+    }
+    promedio=suma/cantidad;
+    return promedio;
+
   }
 
   constructor(private serieService: SerieService) { }

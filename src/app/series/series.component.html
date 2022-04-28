@@ -1,7 +1,10 @@
-
-<div class="container-fluid">
+<div id="titulo">
+  <img id="imagen" src="https://seeklogo.com/images/Y/youtube-tv-shows-logo-16EB8B9C93-seeklogo.com.png" width="50" height="50"
+  >TV SERIES
+</div>
+<div class="container-fluid" id ="tabla">
   <div class="col-6">
-    <table class="table">
+    <table class="table table-hover">
       <thead>
         <tr>
           <th class="h4">#</th>
@@ -12,12 +15,11 @@
       </thead>
       <tbody>
         <tr *ngFor="let c of series">
-
           <td>
             <dd>{{c.id}}</dd>
           </td>
           <td>
-            <dd>{{c.name}}</dd>
+            <dd><a href={{c.webpage}}>{{c.name}}</a></dd>
           </td>
           <td>
             <dd>{{c.channel}}</dd>
@@ -28,5 +30,6 @@
         </tr>
       </tbody>
     </table>
+    <p>Seasons Average: {{getAverage()}}</p>
   </div>
 </div>
